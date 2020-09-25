@@ -1,7 +1,7 @@
 'use strict';
 
 const Stack = require('./stack');
-const { peek, isEmpty, display, is_palendrome, parenthesisCheck, sortStack} = require('./stackfns');
+const { peek, isEmpty, display, is_palindrome, parenthesisCheck, sortStack} = require('./stackfns');
 
 function main() {
   const starTrek = new Stack();
@@ -29,20 +29,20 @@ function main() {
 
   console.log(peek(starTrek));
 }
-
+main();
 function palindromeTest() {
-  console.log(is_palendrome('dad'));
-  console.log(is_palendrome('1001'));
-  console.log(is_palendrome('A man, a plan, a canal: Panama'));
-  console.log(is_palendrome('The quick brown fox jumps over the lazy dog'));
+  console.log(is_palindrome('dad'));
+  console.log(is_palindrome('1001'));
+  console.log(is_palindrome('A man, a plan, a canal: Panama'));
+  console.log(is_palindrome('The quick brown fox jumps over the lazy dog'));
 }
-
-function Parentest() {
+palindromeTest();
+function parentest() {
   console.log(parenthesisCheck('This is a test(dont tell anyone!'));
   console.log(parenthesisCheck('This is a test(dont tell anyone!))'));
   console.log(parenthesisCheck('This is a test((dont tell anyone!)'));
 }
-
+parentest();
 function sortTest(){
   const testStack = new Stack();
   testStack.push(3);
@@ -54,3 +54,4 @@ function sortTest(){
   const sorted = sortStack(testStack);
   display(sorted);
 }
+sortTest();

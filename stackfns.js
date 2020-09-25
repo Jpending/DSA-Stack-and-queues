@@ -13,7 +13,7 @@ function isEmpty(stack){
 
 function display(stack){
   let currNode = stack.top;
-  if(currNode === node) console.log('empty stack');
+  if(currNode === null) console.log('empty stack');
   while(currNode.next !== null) {
     console.log(currNode.value);
     currNode = currNode.next;
@@ -48,7 +48,7 @@ function is_palindrome(string) {
 // else return true.
 
 
-function ParenthesisCheck(string){
+function parenthesisCheck(string){
   //iterate through string
   //push "(" parenthesis (only parenthesis) to stack when found
   //pop stack when ")" found
@@ -68,7 +68,7 @@ function ParenthesisCheck(string){
       parenStack.pop();
     }
   }
-  if(!(isEmpty(parenStack)) {
+  if(!isEmpty(parenStack)) {
     console.log('you are missing a ")"');
     return false;
   }
@@ -86,7 +86,7 @@ function sortStack(stack) {
 
   const newStack = new Stack();
   let minValue = stack.top.value;
-  let maxValue = stakc.top.value;
+  let maxValue = stack.top.value;
   let currNode = stack.top;
   while (currNode.next !== null) {
     if(currNode.value > maxValue) maxValue = currNode.value;
@@ -115,4 +115,4 @@ function sortStack(stack) {
   return newStack;
 }
 
-module.exports = { peek, isEmpty, display, is_palindrome, ParenthesisCheck, sortStack};
+module.exports = { peek, isEmpty, display, is_palindrome, parenthesisCheck, sortStack};

@@ -22,7 +22,7 @@ function queueTest () {
   display(starTrekQ);
     
 }
-// queueTest();
+queueTest();
 
 function doubleQueueTest () {
   const starTrekQ = new DoubleQueue();
@@ -33,17 +33,17 @@ function doubleQueueTest () {
   starTrekQ.enqueue('Sulu');
   starTrekQ.enqueue('Checkov');
   
-  // display(starTrekQ);
-  // console.log('###############');
+  display(starTrekQ);
+  console.log('###############');
 
   starTrekQ.dequeue();
   starTrekQ.dequeue();
 
-  // display(starTrekQ);
+  display(starTrekQ);
   console.log(peek(starTrekQ));
     
 }
-// doubleQueueTest();
+doubleQueueTest();
 
 function ophidinBankTest (){
   const BQ = new Queue();

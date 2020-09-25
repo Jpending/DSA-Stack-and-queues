@@ -30,4 +30,6 @@ class DoubleQueue {
     return firstNode.value;
   }
 }
+
+module.exports = DoubleQueue;
   
